@@ -5,36 +5,43 @@
     android:padding="16dp"
     android:background="@color/gray_100">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tvHistory"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="History"
-            android:textSize="16sp"
-            android:textColor="@color/text_primary"
-            android:layout_marginBottom="12dp"/>
+            android:orientation="vertical"
+            android:layout_gravity="center"> <!-- centers both vertically and horizontally -->
 
-        <TextView
-            android:id="@+id/tvMission"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Mission"
-            android:textSize="16sp"
-            android:textColor="@color/text_primary"
-            android:layout_marginBottom="12dp"/>
+            <TextView
+                android:id="@+id/tvHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="History"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/tvVision"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Vision"
-            android:textSize="16sp"
-            android:textColor="@color/text_primary"
-            android:layout_marginBottom="12dp"/>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvMission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mission"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvVision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vision"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="12dp"/>
+        </LinearLayout>
+
+    </FrameLayout>
 </ScrollView>
