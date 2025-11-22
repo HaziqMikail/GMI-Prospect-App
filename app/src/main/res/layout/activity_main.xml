@@ -30,7 +30,7 @@
 
     <Button
         android:id="@+id/btnEnquiry"
-        android:text="Enquiry (Contact & About Us)"
+        android:text="Enquiry (Contact and About Us)"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

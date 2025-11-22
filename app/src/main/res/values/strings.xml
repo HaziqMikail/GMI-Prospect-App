@@ -1,3 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GMIProspectApp</string>
+    <!-- App Name -->
+    <string name="app_name">GMI Prospect</string>
+
+    <!-- Main Activity -->
+    <string name="welcome_title">Welcome to GMI! 🎓</string>
+    <string name="welcome_message">Explore our programmes and find your path to success in engineering and technology.</string>
+    <string name="gmi_full_name">German-Malaysian Institute</string>
+    <string name="prospect_app">Prospect Application</string>
+
+    <!-- Menu Items -->
+    <string name="view_courses">View Courses</string>
+    <string name="check_eligibility">Check Eligibility</string>
+    <string name="enquiry">Contact &amp; About</string>
+    <string name="apply_online">Apply Online</string>
+    <string name="visit_website">Visit GMI Official Website</string>
+
+    <!-- Courses Activity -->
+    <string name="courses_title">Available Courses at GMI</string>
+    <string name="courses_subtitle">Diploma, GUFP &amp; GAPP Programmes</string>
+    <string name="courses_info">Tap on any course to view more details and visit the official page</string>
+    <string name="apply_now">Apply Now</string>
+
+    <!-- Course Categories -->
+    <string name="category_electrical">ELECTRICAL ENGINEERING</string>
+    <string name="category_mechanical">MECHANICAL ENGINEERING</string>
+    <string name="category_computer">COMPUTER &amp; IT</string>
+    <string name="category_foundation">FOUNDATION PROGRAMMES</string>
+
+    <!-- Eligibility Activity -->
+    <string name="eligibility_title">Eligibility Checker</string>
+    <string name="eligibility_subtitle">Check if you qualify for GMI programmes</string>
+    <string name="select_qualification">Select Your Qualification</string>
+    <string name="enter_grades">Enter Your Grades</string>
+    <string name="math_grade">Mathematics Grade</string>
+    <string name="science_grade">Science/Technical Subject Grade</string>
+    <string name="credits_cgpa">Total Credits / CGPA</string>
+    <string name="reset">Reset</string>
+
+    <!-- Qualification Types -->
+    <string name="qual_spm">SPM (Sijil Pelajaran Malaysia)</string>
+    <string name="qual_olevel">O-Level / IGCSE</string>
+    <string name="qual_stpm">STPM / STAM</string>
+    <string name="qual_matriculation">Matriculation / Foundation</string>
+    <string name="qual_apel">APEL (Work Experience - 3+ years)</string>
+
+    <!-- Eligibility Results -->
+    <string name="congratulations">CONGRATULATIONS! 🎉</string>
+    <string name="eligible_message">You are ELIGIBLE for GMI programmes!</string>
+    <string name="not_eligible">NOT ELIGIBLE</string>
+    <string name="not_eligible_message">Unfortunately, you do not meet the minimum requirements.</string>
+    <string name="results_placeholder">Your eligibility results will appear here...</string>
+
+    <!-- Dialog Messages -->
+    <string name="apply_dialog_title">Apply Now?</string>
+    <string name="apply_dialog_message">You are eligible! Would you like to proceed to the GMI Online Application Portal?</string>
+    <string name="yes_apply">Yes, Apply Now</string>
+    <string name="not_yet">Not Yet</string>
+
+    <!-- Enquiry Activity -->
+    <string name="enquiry_title">Enquiry</string>
+    <string name="enquiry_subtitle">Get in touch with us</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="contact_us_desc">Get our contact details</string>
+    <string name="about_us">About Us</string>
+    <string name="about_us_desc">Learn more about GMI</string>
+
+    <!-- Contact Us Activity -->
+    <string name="contact_title">Contact Us</string>
+    <string name="contact_subtitle">We\'re here to help you</string>
+    <string name="phone_label">Phone</string>
+    <string name="email_label">Email</string>
+    <string name="address_label">Address</string>
+    <string name="website_label">Website</string>
+
+    <!-- Contact Details -->
+    <string name="gmi_phone">+603–8769 2020</string>
+    <string name="gmi_email">promotion@gmi.edu.my</string>
+    <string name="gmi_address">Jalan Ilmiah, Taman Universiti\n43000 Kajang, Selangor, Malaysia</string>
+    <string name="gmi_website">www.gmi.edu.my</string>
+
+    <!-- Action Buttons -->
+    <string name="call_now">Call Now</string>
+    <string name="send_email">Send Email</string>
+    <string name="view_on_map">View on Map</string>
+
+    <!-- About Us Activity -->
+    <string name="about_title">About Us</string>
+    <string name="about_subtitle">German-Malaysian Institute</string>
+
+    <!-- Toast Messages -->
+    <string name="fill_all_fields">Please fill in all fields</string>
+    <string name="select_qualification_error">Please select your qualification</string>
+    <string name="form_reset">Form reset</string>
+    <string name="opening_portal">Opening GMI Online Application Portal</string>
+    <string name="no_email_app">No email app found</string>
+    <string name="course_info_not_available">Course information not available</string>
+    <string name="enter_valid_cgpa">Please enter valid CGPA (e.g., 2.5)</string>
+
+    <!-- URLs -->
+    <string name="gmi_website_url">https://www.gmi.edu.my</string>
+    <string name="gmi_application_url">https://gmi.vialing.com/oa/login</string>
+    <string name="gmi_courses_url">https://www.gmi.edu.my/diploma-programmes/</string>
+
+    <!-- Footer -->
+    <string name="copyright">© 2025 German-Malaysian Institute\nAll Rights Reserved</string>
+
+    <!-- Hints -->
+    <string name="hint_grade">e.g., A, B, C</string>
+    <string name="hint_credits">e.g., 5 (credits) or 2.5 (CGPA)</string>
+
+    <!-- Email Subject -->
+    <string name="email_subject">Enquiry about GMI Programmes</string>
 </resources>

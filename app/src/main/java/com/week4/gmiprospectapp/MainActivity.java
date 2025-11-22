@@ -1,4 +1,4 @@
-package com.example.gmiprospectapp;
+package com.week4.gmiprospectapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,17 +8,43 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button btnCourses, btnEligibility, btnEnquiry;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnCourses = findViewById(R.id.btnCourses);
-        Button btnEligibility = findViewById(R.id.btnEligibility);
-        Button btnEnquiry = findViewById(R.id.btnEnquiry);
+        // Initialize buttons
+        btnCourses = findViewById(R.id.btnCourses);
+        btnEligibility = findViewById(R.id.btnEligibility);
+        btnEnquiry = findViewById(R.id.btnEnquiry);
 
-        btnCourses.setOnClickListener(v -> startActivity(new Intent(this, CoursesActivity.class)));
-        btnEligibility.setOnClickListener(v -> startActivity(new Intent(this, EligibilityActivity.class)));
-        btnEnquiry.setOnClickListener(v -> startActivity(new Intent(this, EnquiryActivity.class)));
+        // Button: View Courses
+        btnCourses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CoursesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Button: Eligibility Checker
+        btnEligibility.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, EligibilityActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Button: Enquiry (Contact & About)
+        btnEnquiry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, EnquiryActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

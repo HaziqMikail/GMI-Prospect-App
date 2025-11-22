@@ -2,4 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <!-- Primary button color -->
+    <color name="purple_500">#6200EE</color>
+
+    <!-- Background for layouts -->
+    <color name="gray_100">#F5F5F5</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">#212121</color>
+
 </resources>
