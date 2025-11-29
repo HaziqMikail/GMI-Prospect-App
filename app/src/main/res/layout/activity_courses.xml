@@ -42,4 +42,14 @@
         android:clipToPadding="false"
         android:scrollbars="vertical"/>
 
+    <Button
+        android:id="@+id/btnEligibility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Check Eligibility"
+        android:backgroundTint="@color/gmi_accent_teal"
+        android:textColor="@color/text_white"
+        android:fontFamily="sans-serif-medium"/>
+
 </LinearLayout>
