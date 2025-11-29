@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:background="#F5F5F5">
 
     <LinearLayout
@@ -10,243 +11,355 @@
         android:orientation="vertical">
 
         <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GMI Eligibility Checker"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:gravity="center"
+            android:padding="16dp"/>
+
+        <!-- Course Selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Select Your Course"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerCourse"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="12dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Qualification Selection Container -->
         <LinearLayout
+            android:id="@+id/qualificationContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#4CAF50"
-            android:padding="20dp"
-            android:elevation="4dp">
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Eligibility Checker"
-                android:textSize="28sp"
+                android:text="2. Select Your Qualification"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvQualificationInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#666"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/qualificationGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- Radio buttons will be added dynamically -->
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- SPM Fields Layout -->
+        <LinearLayout
+            android:id="@+id/layoutSPMFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Select Your Grades"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:gravity="center"/>
+                android:textColor="#1976D2"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Check if you qualify for GMI programmes"
+                android:text="Mathematics Grade"
                 android:textSize="14sp"
-                android:textColor="#C8E6C9"
-                android:gravity="center"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spMathGrade"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Science/Technical Subject Grade"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spScienceGrade"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bahasa Melayu Grade"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spBM"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="English Grade"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sejarah"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spSejarah"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Other Subject Grade"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spOtherSubjects"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown"/>
         </LinearLayout>
 
-        <!-- Main Content -->
+        <!-- CGPA Fields Layout -->
         <LinearLayout
+            android:id="@+id/layoutCGPAFields"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp">
 
-            <!-- Qualification Type Card -->
-            <androidx.cardview.widget.CardView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:elevation="2dp"
-                android:radius="8dp">
+                android:text="3. Enter Your CGPA"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1976D2"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Select Your Qualification"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="#424242"
-                        android:layout_marginBottom="12dp"/>
-
-                    <RadioGroup
-                        android:id="@+id/qualificationGroup"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <RadioButton
-                            android:id="@+id/rbSPM"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="SPM (Sijil Pelajaran Malaysia)"
-                            android:textSize="16sp"
-                            android:padding="8dp"/>
-
-                        <RadioButton
-                            android:id="@+id/rbOLevel"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="O-Level / IGCSE"
-                            android:textSize="16sp"
-                            android:padding="8dp"/>
-
-                        <RadioButton
-                            android:id="@+id/rbSTAM"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="STPM / STAM"
-                            android:textSize="16sp"
-                            android:padding="8dp"/>
-
-                        <RadioButton
-                            android:id="@+id/rbMatriculation"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Matriculation / Foundation"
-                            android:textSize="16sp"
-                            android:padding="8dp"/>
-
-                        <RadioButton
-                            android:id="@+id/rbAPEL"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="APEL (Work Experience - 3+ years)"
-                            android:textSize="16sp"
-                            android:padding="8dp"/>
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Grade Input Card -->
-            <androidx.cardview.widget.CardView
+            <EditText
+                android:id="@+id/etCGPA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:elevation="2dp"
-                android:radius="8dp">
+                android:hint="Enter CGPA (e.g., 2.5)"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:drawable/edit_text"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Enter Your Grades"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="#424242"
-                        android:layout_marginBottom="12dp"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Mathematics Grade"
-                        android:textSize="14sp"
-                        android:textColor="#757575"
-                        android:layout_marginTop="8dp"/>
-
-                    <EditText
-                        android:id="@+id/etMathGrade"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="e.g., A, B, C"
-                        android:inputType="text"
-                        android:textSize="16sp"
-                        android:padding="12dp"
-                        android:background="@android:drawable/edit_text"
-                        android:layout_marginBottom="12dp"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Science/Technical Subject Grade"
-                        android:textSize="14sp"
-                        android:textColor="#757575"/>
-
-                    <EditText
-                        android:id="@+id/etScienceGrade"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="e.g., A, B, C"
-                        android:inputType="text"
-                        android:textSize="16sp"
-                        android:padding="12dp"
-                        android:background="@android:drawable/edit_text"
-                        android:layout_marginBottom="12dp"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Total Credits / CGPA"
-                        android:textSize="14sp"
-                        android:textColor="#757575"/>
-
-                    <EditText
-                        android:id="@+id/etCredits"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="e.g., 5 (credits) or 2.5 (CGPA)"
-                        android:inputType="numberDecimal"
-                        android:textSize="16sp"
-                        android:padding="12dp"
-                        android:background="@android:drawable/edit_text"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Buttons -->
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
-
-                <Button
-                    android:id="@+id/btnCheckEligibility"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Check Eligibility"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#4CAF50"
-                    android:textStyle="bold"
-                    android:layout_marginEnd="8dp"/>
-
-                <Button
-                    android:id="@+id/btnReset"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Reset"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#FF5722"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-
-            <!-- Results Card -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="2dp"
-                android:radius="8dp">
-
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxHeight="400dp">
-
-                    <TextView
-                        android:id="@+id/tvResults"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Your eligibility results will appear here..."
-                        android:textSize="15sp"
-                        android:textColor="#757575"
-                        android:padding="16dp"
-                        android:lineSpacingExtra="4dp"/>
-                </ScrollView>
-            </androidx.cardview.widget.CardView>
+                android:text="Minimum CGPA Required: 2.00"
+                android:textSize="12sp"
+                android:textColor="#666"
+                android:layout_marginTop="4dp"/>
         </LinearLayout>
+
+        <!-- GAPP Fields Layout -->
+        <LinearLayout
+            android:id="@+id/layoutGAPPFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Select Your Grades"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1976D2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="English Grade"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spEngGrade"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modern Mathematics Grade"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spModernMathGrade"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Additional Mathematics Grade"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spAddMathGrade"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Physics Grade"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spPhysicsGrade"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chemistry Grade"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spChemistryGrade"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2 Other Subjects (Average Grade)"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <Spinner
+                android:id="@+id/spOtherGrade"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown"/>
+        </LinearLayout>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/btnCheckEligibility"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Check Eligibility"
+                android:textColor="#FFF"
+                android:backgroundTint="#4CAF50"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Reset"
+                android:textColor="#FFF"
+                android:backgroundTint="#FF5722"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Results -->
+        <TextView
+            android:id="@+id/tvResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:padding="16dp"
+            android:background="#FFF"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.3"
+            android:elevation="2dp"/>
+
     </LinearLayout>
 </ScrollView>
