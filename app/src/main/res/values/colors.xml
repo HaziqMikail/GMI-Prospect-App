@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="gmi_blue_dark">#1E2A3C</color>   <color name="gmi_blue_primary">#0967A0</color> <color name="gmi_accent_teal">#00B894</color>
+    <color name="gmi_accent_orange">#FF9800</color>
+
+    <color name="background_light">#F5F7FA</color>
+    <color name="surface_white">#FFFFFF</color>
+
+    <color name="text_title">#1E2A3C</color>
+    <color name="text_body">#607080</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_white_secondary">#E0E0E0</color>
+
+    <color name="overlay_dark">#66000000</color>
+    <color name="divider">#E0E7FF</color>
+
+
+    <color name="gmi_blue">@color/gmi_blue_primary</color>
+    <color name="gmi_teal">@color/gmi_accent_teal</color>
+    <color name="primary_blue">@color/gmi_blue_primary</color>
+    <color name="primary_blue_light">#E3F2FD</color>
+    <color name="primary_blue_dark">@color/gmi_blue_dark</color>
+    <color name="accent_teal">@color/gmi_accent_teal</color>
+    <color name="accent_orange">@color/gmi_accent_orange</color>
+    <color name="gray_100">@color/background_light</color>
+    <color name="text_primary">@color/text_title</color>
+    <color name="text_secondary">@color/text_body</color>
+
+    <color name="gmi_hero_subtitle">#E3F2FD</color>
+    <color name="gmi_chip_bg">#33000000</color>
+    <color name="gmi_chip_text">#E0F2F1</color>
+    <color name="purple_500">@color/gmi_blue_primary</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-
-    <!-- Primary button color -->
-    <color name="purple_500">#6200EE</color>
-
-    <!-- Background for layouts -->
-    <color name="gray_100">#F5F5F5</color>
-
-    <!-- Text colors -->
-    <color name="text_primary">#212121</color>
-
 </resources>

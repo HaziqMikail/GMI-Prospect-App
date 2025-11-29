@@ -3,48 +3,52 @@ package com.week4.gmiprospectapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnCourses, btnEligibility, btnEnquiry;
+    private View btnCourses, btnEligibility, btnEnquiry, btnAbout;
+    private Animation clickAnim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize buttons
+        // Match IDs from activity_main.xml
         btnCourses = findViewById(R.id.btnCourses);
         btnEligibility = findViewById(R.id.btnEligibility);
         btnEnquiry = findViewById(R.id.btnEnquiry);
+        btnAbout = findViewById(R.id.btnAbout);
 
-        // Button: View Courses
-        btnCourses.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CoursesActivity.class);
-                startActivity(intent);
-            }
+        // Load click animation
+        clickAnim = AnimationUtils.loadAnimation(this, R.anim.scale_click);
+
+        // COURSES
+        btnCourses.setOnClickListener(v -> {
+            v.startAnimation(clickAnim);
+            startActivity(new Intent(MainActivity.this, CoursesActivity.class));
         });
 
-        // Button: Eligibility Checker
-        btnEligibility.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, EligibilityActivity.class);
-                startActivity(intent);
-            }
+        // ELIGIBILITY
+        btnEligibility.setOnClickListener(v -> {
+            v.startAnimation(clickAnim);
+            startActivity(new Intent(MainActivity.this, EligibilityActivity.class));
         });
 
-        // Button: Enquiry (Contact & About)
-        btnEnquiry.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, EnquiryActivity.class);
-                startActivity(intent);
-            }
+        // ENQUIRY
+        btnEnquiry.setOnClickListener(v -> {
+            v.startAnimation(clickAnim);
+            startActivity(new Intent(MainActivity.this, EnquiryActivity.class));
+        });
+
+        // ABOUT
+        btnAbout.setOnClickListener(v -> {
+            v.startAnimation(clickAnim);
+            startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
         });
     }
 }

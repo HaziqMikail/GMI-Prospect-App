@@ -2,46 +2,84 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/gray_100">
+    android:background="@color/background_light"
+    android:padding="20dp">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/gmi_logo"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About GMI"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_title"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center"> <!-- centers both vertically and horizontally -->
+            android:text="Our History"
+            android:textStyle="bold"
+            android:textColor="@color/gmi_blue_primary"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
 
-            <TextView
-                android:id="@+id/tvHistory"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:text="History"
-                android:textColor="@color/text_primary"
-                android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading history..."
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/text_body"
+            android:layout_marginBottom="24dp"/>
 
-            <TextView
-                android:id="@+id/tvMission"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mission"
-                android:textSize="16sp"
-                android:textColor="@color/text_primary"
-                android:layout_marginBottom="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mission"
+            android:textStyle="bold"
+            android:textColor="@color/gmi_blue_primary"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
 
-            <TextView
-                android:id="@+id/tvVision"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Vision"
-                android:textSize="16sp"
-                android:textColor="@color/text_primary"
-                android:layout_marginBottom="12dp"/>
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tvMission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading mission..."
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/text_body"
+            android:layout_marginBottom="24dp"/>
 
-    </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vision"
+            android:textStyle="bold"
+            android:textColor="@color/gmi_blue_primary"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvVision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading vision..."
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/text_body"
+            android:layout_marginBottom="40dp"/>
+
+    </LinearLayout>
 </ScrollView>
